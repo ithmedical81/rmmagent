@@ -85,23 +85,23 @@ type Agent struct {
 }
 
 const (
-	progFilesName        = "TacticalAgent"
-	winExeName           = "tacticalrmm.exe"
-	winSvcName           = "tacticalrmm"
+	progFilesName        = "ITH RMM Agent"
+	winExeName           = "ithrmm.exe"
+	winSvcName           = "ithrmm"
 	meshSvcName          = "mesh agent"
-	etcConfig            = "/etc/tacticalagent"
-	nixAgentDir          = "/opt/tacticalagent"
+	etcConfig            = "/etc/ithagent"
+	nixAgentDir          = "/opt/ithagent"
 	nixMeshDir           = "/opt/tacticalmesh"
-	nixAgentBin          = nixAgentDir + "/tacticalagent"
+	nixAgentBin          = nixAgentDir + "/ithagent"
 	nixAgentBinDir       = nixAgentDir + "/bin"
 	nixAgentEtcDir       = nixAgentDir + "/etc"
 	nixMeshAgentBin      = nixMeshDir + "/meshagent"
-	macPlistPath         = "/Library/LaunchDaemons/tacticalagent.plist"
-	macPlistName         = "tacticalagent"
+	macPlistPath         = "/Library/LaunchDaemons/ithagent.plist"
+	macPlistName         = "ithagent"
 	defaultMacMeshSvcDir = "/usr/local/mesh_services"
 )
 
-var defaultWinTmpDir = filepath.Join(os.Getenv("PROGRAMDATA"), "TacticalRMM")
+var defaultWinTmpDir = filepath.Join(os.Getenv("PROGRAMDATA"), "ITH RMM")
 var winMeshDir = filepath.Join(os.Getenv("PROGRAMFILES"), "Mesh Agent")
 var natsCheckin = []string{"agent-hello", "agent-agentinfo", "agent-disks", "agent-winsvc", "agent-publicip", "agent-wmi"}
 var limitNatsData = []string{"agent-winsvc", "agent-wmi"}
@@ -216,7 +216,7 @@ func New(logger *logrus.Logger, version string) *Agent {
 	svcConf := &service.Config{
 		Executable:  exe,
 		Name:        winSvcName,
-		DisplayName: "TacticalRMM Agent Service",
+		DisplayName: "ITH RMM Agent Service",
 		Arguments:   []string{"-m", "svc"},
 		Description: "TacticalRMM Agent Service",
 		Option: service.KeyValue{

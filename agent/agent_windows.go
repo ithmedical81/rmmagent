@@ -502,10 +502,10 @@ func ShowStatus(version string) {
 		}
 		var handle w32.HWND
 		msg := fmt.Sprintf("Agent: %s\n\nMesh Agent: %s", statusMap[winSvcName], statusMap[meshSvcName])
-		w32.MessageBox(handle, msg, fmt.Sprintf("Tactical RMM v%s", version), w32.MB_OK|w32.MB_ICONINFORMATION)
+		w32.MessageBox(handle, msg, fmt.Sprintf("ITH RMM v%s", version), w32.MB_OK|w32.MB_ICONINFORMATION)
 	} else {
-		fmt.Println("Tactical RMM Version", version)
-		fmt.Println("Tactical Agent:", statusMap[winSvcName])
+		fmt.Println("ITH RMM Version", version)
+		fmt.Println("ITH Agent:", statusMap[winSvcName])
 		fmt.Println("Mesh Agent:", statusMap[meshSvcName])
 	}
 }

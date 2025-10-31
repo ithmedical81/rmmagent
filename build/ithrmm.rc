@@ -1,0 +1,45 @@
+# ITH Medical Resource File for Windows Executable
+# This file defines the version information and branding for the Windows executable
+
+#include <windows.h>
+
+#define VER_FILEVERSION             2,9,1,0
+#define VER_FILEVERSION_STR         "2.9.1.0\0"
+#define VER_PRODUCTVERSION          2,9,1,0
+#define VER_PRODUCTVERSION_STR      "2.9.1\0"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0x0L
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "ITH Medical\0"
+            VALUE "FileDescription", "ITH RMM Agent - Remote Monitoring & Management\0"
+            VALUE "FileVersion",     VER_FILEVERSION_STR
+            VALUE "InternalName",    "ithrmm\0"
+            VALUE "LegalCopyright",  "Copyright © 2025 ITH Medical. Based on Tactical RMM (AmidaWare Inc.)\0"
+            VALUE "OriginalFilename","ithrmm.exe\0"
+            VALUE "ProductName",     "ITH RMM Agent\0"
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR
+            VALUE "Comments",        "ITH Medical Remote Monitoring and Management Agent\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+// Application icon - replace with ITH Medical logo
+1 ICON "ith-medical-icon.ico"
+
+// Application manifest for Windows compatibility
+1 RT_MANIFEST "ithrmm.exe.manifest"

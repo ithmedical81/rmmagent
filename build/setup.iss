@@ -1,8 +1,8 @@
-#define MyAppName "Tactical RMM Agent"
-#define MyAppVersion "2.9.1"
-#define MyAppPublisher "AmidaWare Inc"
-#define MyAppURL "https://github.com/amidaware"
-#define MyAppExeName "tacticalrmm.exe"
+#define MyAppName "ITH RMM Agent"
+#define MyAppVersion "2.9.1-ITH"
+#define MyAppPublisher "ITH Medical"
+#define MyAppURL "https://ith-medical.com"
+#define MyAppExeName "ithrmm.exe"
 #define MESHEXE "meshagent.exe"
 #define MESHDIR "{sd}\Program Files\Mesh Agent"
 
@@ -15,7 +15,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName="{sd}\Program Files\TacticalAgent"
+DefaultDirName="{sd}\Program Files\ITH RMM Agent"
 DisableDirPage=yes
 SetupLogging=yes
 DisableProgramGroupPage=yes
